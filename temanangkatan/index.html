@@ -9,10 +9,14 @@
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
-            padding: 20px;
+            padding: 30px 30px 100px;
         }
         h1 {
             color: #333;
+        }
+        h3 {
+            color: #555;
+            margin-bottom: 20px;
         }
         form {
             background-color: #fff;
@@ -40,6 +44,9 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-bottom: 5px;
+            display: block;
+            width: 100%;
         }
         button:hover {
             background-color: #45a049;
@@ -56,7 +63,7 @@
         }
         img {
             display: block;
-            max-width: 100%;
+            height: 236px; /* Fixed size */
             margin-bottom: 5px;
             border-radius: 5px;
         }
@@ -64,6 +71,17 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: red;
+            padding: 10px 20px;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -77,6 +95,10 @@
 </form>
 
 <div id="images"></div>
+
+<footer>
+    <p>Disclaimer: Situs web ini hanya mengambil data dari media.unpad.ac.id<br>Semua data yang ada merupakan tanggung jawab Universitas Padjadjaran, termasuk foto, ijazah, dan transkrip nilai</p>
+</footer>
 
 <script>
     document.getElementById('npmForm').addEventListener('submit', function(event) {
@@ -94,6 +116,20 @@
             return url;
         }
 
+        function getIjazahUrl(npm) {
+            const kode = npm.slice(0, 6);
+            const tahun = npm.slice(6, 8);
+            const url = `https://media.unpad.ac.id/ijazah/${kode}/20${tahun}/${npm}_ijazah.pdf`;
+            return url;
+        }
+
+        function getTranskripUrl(npm) {
+            const kode = npm.slice(0, 6);
+            const tahun = npm.slice(6, 8);
+            const url = `https://media.unpad.ac.id/transkrip/${kode}/20${tahun}/${npm}_transkrip.pdf`;
+            return url;
+        }
+
         let increment = 1;
 
         function loadImage() {
@@ -106,11 +142,31 @@
                 const photoContainer = document.createElement('div');
                 photoContainer.className = 'photo-container';
 
+                const npmCurrent = `${npm.slice(0, 8)}${increment.toString().padStart(4, '0')}`;
                 const npmText = document.createElement('p');
-                npmText.innerText = `NPM: ${npm.slice(0, 8)}${increment.toString().padStart(4, '0')}`;
+                npmText.innerText = `NPM: ${npmCurrent}`;
+
+                const ijazahBtn = document.createElement('button');
+                ijazahBtn.innerText = 'Lihat Ijazah';
+
+                const transkripBtn = document.createElement('button');
+                transkripBtn.innerText = 'Lihat Transkrip';
+
+                const ijazahUrl = getIjazahUrl(npmCurrent);
+                const transkripUrl = getTranskripUrl(npmCurrent);
+
+                ijazahBtn.onclick = function() {
+                    window.open(ijazahUrl, '_blank');
+                };
+
+                transkripBtn.onclick = function() {
+                    window.open(transkripUrl, '_blank');
+                };
 
                 photoContainer.appendChild(img);
                 photoContainer.appendChild(npmText);
+                photoContainer.appendChild(ijazahBtn);
+                photoContainer.appendChild(transkripBtn);
 
                 imagesDiv.appendChild(photoContainer);
                 increment++;
@@ -119,7 +175,6 @@
 
             img.onerror = function() {
                 // Stop loading if image does not exist
-                console.log(`Image ${increment} does not exist.`);
             };
         }
 
