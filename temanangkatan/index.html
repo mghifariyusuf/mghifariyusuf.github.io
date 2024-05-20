@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teman Angkatan Unpad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .photo-container {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        #images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Teman Angkatan Unpad</h1>
+<h3>Masukan NPM dan temukan teman prodi satu angkatan</h3>
+<form id="npmForm">
+    <label for="npm">NPM:</label>
+    <input type="text" id="npm" name="npm" required>
+    <button type="submit">Cari</button>
+</form>
+
+<div id="images"></div>
+
+<script>
+    document.getElementById('npmForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const npm = document.getElementById('npm').value;
+        const imagesDiv = document.getElementById('images');
+        imagesDiv.innerHTML = ''; // Clear previous images
+
+        function getImageUrl(npm, increment) {
+            const kode = npm.slice(0, 6);
+            const tahun = npm.slice(6, 8);
+            const incrementFormatted = increment.toString().padStart(4, '0');
+            const url = `https://media.unpad.ac.id/photo/mahasiswa/${kode}/20${tahun}/${kode}${tahun}${incrementFormatted}.JPG`;
+            return url;
+        }
+
+        let increment = 1;
+
+        function loadImage() {
+            const url = getImageUrl(npm, increment);
+            const img = document.createElement('img');
+            img.src = url;
+            img.alt = `Image ${increment}`;
+
+            img.onload = function() {
+                const photoContainer = document.createElement('div');
+                photoContainer.className = 'photo-container';
+
+                const npmText = document.createElement('p');
+                npmText.innerText = `NPM: ${npm.slice(0, 8)}${increment.toString().padStart(4, '0')}`;
+
+                photoContainer.appendChild(img);
+                photoContainer.appendChild(npmText);
+
+                imagesDiv.appendChild(photoContainer);
+                increment++;
+                loadImage(); // Load next image
+            };
+
+            img.onerror = function() {
+                // Stop loading if image does not exist
+                console.log(`Image ${increment} does not exist.`);
+            };
+        }
+
+        loadImage(); // Start loading images
+    });
+</script>
+</body>
+</html>
