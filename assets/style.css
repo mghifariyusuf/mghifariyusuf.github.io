@@ -112,8 +112,7 @@ html {
 }
 
 .profile-photo {
-    width: 100%;
+    width: 255px;
     height: auto;
-    object-fit: cover;
-    border-radius: 3%;
+    border-radius: 50%;
 }
