@@ -90,14 +90,14 @@
 <h3>Masukan NPM dan temukan teman prodi satu angkatan</h3>
 <form id="npmForm">
     <label for="npm">NPM:</label>
-    <input type="text" id="npm" name="npm" required>
+    <input type="text" id="npm" name="npm" required placeholder="Contoh: 180610100001" pattern="\d{12}" title="NPM harus terdiri dari 12 digit angka">
     <button type="submit">Cari</button>
 </form>
 
 <div id="images"></div>
 
 <footer>
-    <p>Disclaimer: Situs web ini hanya mengambil data dari media.unpad.ac.id<br>Semua data yang ada merupakan tanggung jawab Universitas Padjadjaran, termasuk foto, ijazah, dan transkrip nilai</p>
+    <p>Disclaimer: Situs web ini hanya mengambil data dari media.unpad.ac.id<br>Semua data yang ada merupakan tanggung jawab Universitas Padjadjaran</p>
 </footer>
 
 <script>
@@ -165,8 +165,8 @@
 
                 photoContainer.appendChild(img);
                 photoContainer.appendChild(npmText);
-                photoContainer.appendChild(ijazahBtn);
-                photoContainer.appendChild(transkripBtn);
+                // photoContainer.appendChild(ijazahBtn);
+                // photoContainer.appendChild(transkripBtn);
 
                 imagesDiv.appendChild(photoContainer);
                 increment++;
