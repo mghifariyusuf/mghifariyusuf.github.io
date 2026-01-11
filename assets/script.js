@@ -53,7 +53,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const message = formData.get('message');
     
     // Create mailto link
-    const mailtoLink = `mailto:ghifariyusf@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+    const mailtoLink = `mailto:moghifari@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -79,6 +79,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Navbar scroll effect
+let lastScroll = 0;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+        navbar.classList.remove('shadow-lg');
+        navbar.style.backdropFilter = 'blur(12px)';
+    } else {
+        navbar.classList.add('shadow-lg');
+    }
+    
+    lastScroll = currentScroll;
+});
+
 // Initialize animations on page load
 window.addEventListener('load', function() {
     // Trigger initial fade-in animations
@@ -90,3 +107,4 @@ window.addEventListener('load', function() {
         });
     }, 100);
 });
+

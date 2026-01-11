@@ -1,385 +1,651 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Mohammad Ghifari Yusuf</title>
-    <link rel="icon" type="image/jpeg" href="./assets/images/profile_photo.jpg">
+    <title>Mohammad Ghifari Yusuf's Profile</title>
+    <link rel="icon" type="image/jpeg" href="./assets/icons/favicon.ico">
     <link rel="stylesheet" href="./assets/style.css" />
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Software Engineer with over 6 years of experience building scalable, secure systems using Go, Ruby on Rails, and JavaScript.">
+    <meta name="description"
+        content="Software Engineer specializing in backend systems and cloud applications since 2018. Skilled across multiple programming languages and certified as an AWS Cloud Practitioner.">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900">
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-300" id="navbar">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm transition-all duration-300 border-b border-gray-200/50 dark:border-gray-700/50"
+        id="navbar">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="#" class="text-xl font-bold gradient-bg bg-clip-text text-transparent">MGY</a>
-            
+
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#about" class="nav-link text-gray-700 dark:text-gray-300">About</a>
+                <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300">Experience</a>
+                <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300">Skills</a>
+                <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300">Projects</a>
+                <a href="#education" class="nav-link text-gray-700 dark:text-gray-300">Education</a>
+                <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300">Contact</a>
             </div>
-            
+
             <!-- Mobile Menu Button -->
-            <button class="md:hidden" onclick="toggleMobileMenu()">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 md:hidden" id="mobileMenu">
-            <div class="p-4">
-                <button onclick="toggleMobileMenu()" class="float-right">
+            <div class="flex items-center gap-2 md:hidden">
+                <button class="p-2 rounded-lg hover:bg-gray-100 transition-colors" onclick="toggleMobileMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg z-50 md:hidden border-l border-gray-200/50 dark:border-gray-700/50"
+            id="mobileMenu">
+            <div class="p-4">
+                <button onclick="toggleMobileMenu()"
+                    class="float-right p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                     </svg>
                 </button>
                 <div class="mt-8 space-y-4">
-                    <a href="#about" class="block py-2 nav-link" onclick="toggleMobileMenu()">About</a>
-                    <a href="#experience" class="block py-2 nav-link" onclick="toggleMobileMenu()">Experience</a>
-                    <a href="#skills" class="block py-2 nav-link" onclick="toggleMobileMenu()">Skills</a>
-                    <a href="#projects" class="block py-2 nav-link" onclick="toggleMobileMenu()">Projects</a>
-                    <a href="#education" class="block py-2 nav-link" onclick="toggleMobileMenu()">Education</a>
-                    <a href="#contact" class="block py-2 nav-link" onclick="toggleMobileMenu()">Contact</a>
+                    <a href="#about" class="block py-2 nav-link text-gray-700 dark:text-gray-300"
+                        onclick="toggleMobileMenu()">About</a>
+                    <a href="#experience" class="block py-2 nav-link text-gray-700 dark:text-gray-300"
+                        onclick="toggleMobileMenu()">Experience</a>
+                    <a href="#skills" class="block py-2 nav-link text-gray-700 dark:text-gray-300"
+                        onclick="toggleMobileMenu()">Skills</a>
+                    <a href="#projects" class="block py-2 nav-link text-gray-700 dark:text-gray-300"
+                        onclick="toggleMobileMenu()">Projects</a>
+                    <a href="#education" class="block py-2 nav-link text-gray-700 dark:text-gray-300"
+                        onclick="toggleMobileMenu()">Education</a>
+                    <a href="#contact" class="block py-2 nav-link text-gray-700 dark:text-gray-300"
+                        onclick="toggleMobileMenu()">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Profile Section -->
-    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div class="absolute inset-0 gradient-bg opacity-10"></div>
-        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-200 rounded-full filter blur-3xl opacity-30 floating"></div>
-        <div class="absolute bottom-1/3 right-1/3 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl opacity-30 floating" style="animation-delay: 1s;"></div>
-        
+    <section
+        class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div class="absolute inset-0 gradient-bg opacity-5 dark:opacity-10"></div>
+        <div
+            class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/20 dark:bg-blue-500/10 rounded-full filter blur-3xl floating">
+        </div>
+        <div class="absolute bottom-1/3 right-1/3 w-96 h-96 bg-purple-400/20 dark:bg-purple-500/10 rounded-full filter blur-3xl floating"
+            style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/2 w-72 h-72 bg-pink-400/10 dark:bg-pink-500/5 rounded-full filter blur-3xl floating"
+            style="animation-delay: 2s;"></div>
+
         <div class="container mx-auto px-4 text-center z-10">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 fade-in">Mohammad Ghifari Yusuf</h1>
-            <h2 class="text-xl md:text-2xl text-gray-600 mb-6 fade-in">Software Engineer</h2>
-            <div class="flex flex-wrap justify-center gap-3 mb-8 fade-in">
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Go</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Ruby on Rails</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AWS</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Microservices</span>
+            <div class="mb-6 fade-in">
+                <div
+                    class="inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 animate-gradient">
+                    <div class="bg-white dark:bg-gray-900 rounded-full p-1">
+                        <img src="./assets/images/profile_photo.jpg"
+                            class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white dark:border-gray-800"
+                            alt="Profile Photo">
+                    </div>
+                </div>
+            </div>
+            <h1
+                class="text-5xl md:text-7xl font-bold mb-4 fade-in bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 dark:from-blue-400 dark:via-blue-300 dark:to-blue-200 bg-clip-text text-transparent">
+                Mohammad Ghifari Yusuf</h1>
+            <h2 class="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-4 fade-in font-medium">Software Engineer
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 fade-in">📍 Jakarta, Indonesia</p>
+            <div class="flex flex-wrap justify-center gap-3 mb-10 fade-in">
+                <span
+                    class="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium backdrop-blur-sm border border-blue-200/50 dark:border-blue-700/50">Go</span>
+                <span
+                    class="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium backdrop-blur-sm border border-blue-200/50 dark:border-blue-700/50">JavaScript</span>
+                <span
+                    class="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium backdrop-blur-sm border border-blue-200/50 dark:border-blue-700/50">Ruby
+                    on Rails</span>
+                <span
+                    class="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium backdrop-blur-sm border border-blue-200/50 dark:border-blue-700/50">PHP</span>
+                <span
+                    class="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium backdrop-blur-sm border border-blue-200/50 dark:border-blue-700/50">AWS</span>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
                 <div class="w-full sm:w-auto">
-                    <a href="#contact" class="block w-full px-6 py-3 text-center gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity">
+                    <a href="#contact"
+                        class="group block w-full px-8 py-4 text-center gradient-bg text-white rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 font-medium">
                         Contact Me
                     </a>
                 </div>
 
                 <div class="w-full sm:w-auto flex flex-col items-center">
-                    <a href="./assets/Resume - Mohammad Ghifari Yusuf.pdf" target="_blank" class="block w-full px-6 py-3 text-center border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                        Download Resume
+                    <a href="./assets/resume/Resume - Mohammad Ghifari Yusuf.pdf" target="_blank"
+                        class="group block w-full px-8 py-4 text-center border-2 border-gray-300 dark:border-gray-600 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 font-medium backdrop-blur-sm bg-white/50 dark:bg-gray-900/50 text-gray-900 dark:text-gray-100">
+                        <span class="flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                            Download Resume
+                        </span>
                     </a>
-                    <span class="text-sm text-gray-500 mt-1">Last Updated: May 2025</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400 mt-2">Last Updated: January 2026</span>
                 </div>
             </div>
         </div>
-        
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 floating">
-            <a href="#about">
-                <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+            <a href="#about"
+                class="relative inline-block p-3 rounded-full bg-animate-gradient backdrop-blur-md border-2 border-blue-400/50 hover:border-blue-500 transition-all shadow-lg hover:shadow-xl hover:scale-110 scroll-arrow">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
             </a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row gap-10 items-center">
-                <div class="md:w-1/2 relative fade-in">
-                    <div class="w-full h-full bg-white rounded-xl flex items-center justify-center">
-                        <div class="text-6xl font-bold gradient-bg bg-clip-text text-transparent"><img src="./assets/images/profile_photo.jpg" class="profile-photo"></div>
+            <div class="max-w-3xl mx-auto fade-in">
+                <h2 class="text-3xl font-bold mb-6 flex items-center text-gray-900 dark:text-gray-100">
+                    <span
+                        class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">01</span>
+                    About Me
+                </h2>
+                <p class="text-lg mb-6 text-gray-600 dark:text-gray-300">
+                    Software Engineer specializing in backend systems and cloud applications since 2018. Skilled across
+                    multiple programming languages and certified as an AWS Cloud Practitioner. Passionate about
+                    learning, problem-solving, and building impactful solutions through collaboration.
+                </p>
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/icons/email.svg"
+                            class="w-5 h-5 object-contain dark:invert dark:opacity-80" />
+                        <a href="mailto:moghifari@gmail.com"
+                            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">moghifari@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/icons/linkedin.svg"
+                            class="w-5 h-5 object-contain dark:invert dark:opacity-80" />
+                        <a href="https://linkedin.com/in/mghifariyusuf" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">linkedin.com/in/mghifariyusuf</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/icons/github.svg"
+                            class="w-5 h-5 object-contain dark:invert dark:opacity-80" />
+                        <a href="https://github.com/mghifariyusuf" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">github.com/mghifariyusuf</a>
                     </div>
                 </div>
-                <div class="md:w-1/2 fade-in">
-                    <h2 class="text-3xl font-bold mb-6 flex items-center">
-                        <span class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">01</span>
-                        About Me
-                    </h2>
-                    <p class="text-lg mb-6 text-gray-600">
-                        Software Engineer with over 6 years of experience building scalable, secure systems using Go, Ruby on Rails, and JavaScript. Known for strong ownership, a collaborative mindset, and a passion for solving complex problems. Skilled in delivering cloud-native and real-time solutions that meet evolving business needs.
-                    </p>
-                    <div class="space-y-3 mb-6">
-                        <div class="flex items-center gap-3">
-                            <img src="./assets/icons/email.svg" class="w-5 h-5 object-contain" />
-                            <a href="mailto:ghifariyusf@gmail.com" class="hover:text-blue-600 transition-colors">ghifariyusf@gmail.com</a>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <img src="./assets/icons/linkedin.svg" class="w-5 h-5 object-contain" />
-                            <a href="https://linkedin.com/in/mghifariyusuf" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">linkedin.com/in/mghifariyusuf</a>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <img src="./assets/icons/github.svg" class="w-5 h-5 object-contain" />
-                            <a href="https://github.com/mghifariyusuf" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">github.com/mghifariyusuf</a>
-                        </div>
-                    </div>
-                    <a href="#contact" class="inline-block px-6 py-3 gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity">Get In Touch</a>
-                </div>
+                <a href="#contact"
+                    class="inline-block px-6 py-3 gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity">Get
+                    In Touch</a>
             </div>
+        </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-50">
+    <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 fade-in">
-                <h2 class="text-3xl font-bold mb-4">
-                    <span class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">02</span>
+                <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                    <span
+                        class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">02</span>
                     Work Experience
                 </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Over 6 years of professional experience building scalable systems and solving complex problems.</p>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Professional experience since 2018
+                    building scalable backend systems and cloud applications.</p>
             </div>
 
             <div class="space-y-8">
-                <div class="bg-white rounded-lg shadow-sm border-l-4 border-l-blue-600 p-6 fade-in">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 border-l-4 border-l-blue-600 dark:border-l-blue-500 p-6 fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 backdrop-blur-sm">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/images/paragoncorp_logo.jpg" class="w-10 h-10 object-contain rounded" />
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Software Engineer
+                                </h3>
+                                <p class="text-lg font-medium text-blue-600 dark:text-blue-400">ParagonCorp</p>
+                            </div>
+                        </div>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm w-fit">Jul
+                            2025 - Present</span>
+                    </div>
+                    <ul class="space-y-2 mb-4 text-gray-600 dark:text-gray-300">
+                        <li class="flex gap-2">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Secured and modernized backend systems by remediating critical vulnerabilities,
+                                integrating SAP for automated invoice parking and posting, and migrating a legacy PHP
+                                budgeting system to a scalable Express.js architecture.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Enabled cross-entity and multi-year planning, improved system reliability and data
+                                consistency, and mentored an intern to deliver production-ready features.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">JavaScript</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">Express.js</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">PHP</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">SAP</span>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 border-l-4 border-l-blue-600 dark:border-l-blue-500 p-6 fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 backdrop-blur-sm">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
                         <div class="flex items-center gap-4">
                             <img src="./assets/images/accelbyte_logo.jpeg" class="w-10 h-10 object-contain rounded" />
                             <div>
-                                <h3 class="text-xl font-semibold">Software Engineer, SDE-3</h3>
-                                <p class="text-lg font-medium text-blue-600">AccelByte</p>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Software Engineer
+                                </h3>
+                                <p class="text-lg font-medium text-blue-600 dark:text-blue-400">AccelByte</p>
                             </div>
                         </div>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm w-fit">Oct 2022 - May 2025</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm w-fit">Oct
+                            2022 - May 2025</span>
                     </div>
-                    <ul class="space-y-2 mb-4 text-gray-600">
+                    <ul class="space-y-2 mb-4 text-gray-600 dark:text-gray-300">
                         <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Developed the AccelByte Development Toolkit, enabling the distribution of 12.5 petabytes of game builds and processing 118,000 crash reports in 2024, which streamlined workflows and supported over eight successful game launches.</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Built and operated the AccelByte Development Toolkit to distribute 12.5 PB of game
+                                builds and process 118K crash reports in 2024, supporting 8+ successful game
+                                launches.</span>
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Contributed to designing and maintaining the scalable Armada dedicated server system on AWS and bare-metal infrastructure with HashiCorp Nomad, ensuring reliable performance for large-scale multiplayer environments.</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Designed and maintained large-scale dedicated server infrastructure on AWS and bare
+                                metal using HashiCorp Nomad to ensure reliable multiplayer services.</span>
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Enhanced organizational security by implementing ISO 27001 audit recommendations, achieving compliance, and significantly reducing risk exposure across projects.</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Mentored Fresh Graduate Program trainees through hands-on guidance and task planning, accelerating their skill development and cutting task delivery times from weeks to days, boosting overall team productivity.</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Implemented ISO 27001 audit recommendations to achieve compliance and reduce security
+                                risk, and mentored fresh graduates to accelerate technical growth and cut feature
+                                delivery time from weeks to days.</span>
                         </li>
                     </ul>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Go</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">AWS</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Nomad</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Microservices</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">Go</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">AWS</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">Nomad</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">Microservices</span>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-sm border-l-4 border-l-blue-600 p-6 fade-in">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 border-l-4 border-l-blue-600 dark:border-l-blue-500 p-6 fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 backdrop-blur-sm">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
                         <div class="flex items-center gap-4">
                             <img src="./assets/images/happyfresh_logo.jpeg" class="w-10 h-10 object-contain rounded" />
                             <div>
-                                <h3 class="text-xl font-semibold">Software Engineer, Middle</h3>
-                                <p class="text-lg font-medium text-blue-600">HappyFresh</p>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Backend Engineer</h3>
+                                <p class="text-lg font-medium text-blue-600 dark:text-blue-400">HappyFresh</p>
                             </div>
                         </div>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm w-fit">Aug 2021 - Oct 2022</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm w-fit">Aug
+                            2021 - Oct 2022</span>
                     </div>
-                    <ul class="space-y-2 mb-4 text-gray-600">
+                    <ul class="space-y-2 mb-4 text-gray-600 dark:text-gray-300">
                         <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Developed and maintained scalable Order and Payment microservices that improved transaction reliability and user experience for 1.5 million active users across Southeast Asia.</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Developed and maintained scalable Order and Payment microservices serving 1.5M+ active
+                                users across Southeast Asia, improving system reliability and user experience.</span>
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Engineered a payment orchestration system supporting multiple gateways, dynamic pricing, refunds, and withdrawals, boosting transaction volume and processing speed.</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Integrated ShopeePay in Indonesia and Touch 'n Go in Malaysia, expanding payment options and driving an estimated 30% transaction growth in these markets.</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Implemented balance withdrawals via Xendit, enabling secure transfers across over 140 banks and e-wallets, enhancing cash flow and user retention.</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Engineered a multi-gateway payment orchestration platform supporting dynamic pricing,
+                                refunds, and withdrawals via Xendit (140+ banks and e-wallets), and integrated ShopeePay
+                                and Touch 'n Go, driving approximately 30% transaction growth.</span>
                         </li>
                     </ul>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Go</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Ruby on Rails</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">AWS</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Microservices</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">API Integration</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">Go</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">Ruby
+                            on Rails</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">AWS</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">Microservices</span>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-sm border-l-4 border-l-blue-600 p-6 fade-in">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 border-l-4 border-l-blue-600 dark:border-l-blue-500 p-6 fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 backdrop-blur-sm">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
                         <div class="flex items-center gap-4">
                             <img src="./assets/images/molatv_logo.jpeg" class="w-10 h-10 object-contain rounded" />
                             <div>
-                                <h3 class="text-xl font-semibold">Junior Software Engineer</h3>
-                                <p class="text-lg font-medium text-blue-600">Mola TV</p>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Backend Engineer Head
+                                </h3>
+                                <p class="text-lg font-medium text-blue-600 dark:text-blue-400">Mola TV</p>
                             </div>
                         </div>
-                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm w-fit">Nov 2018 - Jul 2021</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm w-fit">May
+                            2021 - Jul 2021</span>
                     </div>
-                    <ul class="space-y-2 mb-4 text-gray-600">
+                    <ul class="space-y-2 mb-4 text-gray-600 dark:text-gray-300">
                         <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Developed and maintained scalable backend services, including inbox, push notifications, match reminders, and dynamic leaderboards, which significantly enhanced user engagement and helped grow the platform to over 2 million active users across multiple platforms.</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Managing backend architecture and providing technical leadership to deliver scalable,
+                                reliable, and secure systems across the platform. Reporting directly to the Engineering
+                                Head, leading backend engineers across four cross-functional squads: Delivery (video
+                                streaming and content services), Engagement (user experience and engagement features),
+                                Commercial (ads, payments, and subscriptions), and Security (streaming protection,
+                                anti-piracy, and security enforcement).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 border-l-4 border-l-blue-600 dark:border-l-blue-500 p-6 fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 backdrop-blur-sm">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/images/molatv_logo.jpeg" class="w-10 h-10 object-contain rounded" />
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Backend Engineer</h3>
+                                <p class="text-lg font-medium text-blue-600 dark:text-blue-400">Mola TV</p>
+                            </div>
+                        </div>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm w-fit">Nov
+                            2018 - Apr 2021</span>
+                    </div>
+                    <ul class="space-y-2 mb-4 text-gray-600 dark:text-gray-300">
+                        <li class="flex gap-2">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Built and maintained backend services—including inbox, push notifications, match
+                                reminders, and dynamic leaderboards—boosting user engagement and scaling to 2M+ active
+                                users.</span>
                         </li>
                         <li class="flex gap-2">
-                            <span class="text-blue-600 font-bold">•</span>
-                            <span>Designed and supported real-time interactive quiz systems for nationwide live video broadcasts, ensuring low-latency and high-reliability communication. These systems efficiently scaled to support up to 500,000 concurrent viewers, enabling seamless audience participation and driving higher engagement during live events.</span>
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Designed and supported real-time interactive quiz systems for nationwide live
+                                broadcasts, handling up to 500K concurrent viewers with low latency and high
+                                reliability.</span>
                         </li>
                     </ul>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Go</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Node.js</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">GCP</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Microservices</span>
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">WebSocket</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">Go</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">Node.js</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">GCP</span>
+                        <span
+                            class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-sm border border-blue-200/50 dark:border-blue-700/50">WebSocket</span>
                     </div>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 border-l-4 border-l-blue-600 dark:border-l-blue-500 p-6 fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 backdrop-blur-sm">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/images/tokopedia_logo.jpg" class="w-10 h-10 object-contain rounded" />
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Technical Writer
+                                    Intern</h3>
+                                <p class="text-lg font-medium text-blue-600 dark:text-blue-400">Tokopedia</p>
+                            </div>
+                        </div>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm w-fit">Mar
+                            2018 - Jun 2018</span>
+                    </div>
+                    <ul class="space-y-2 mb-4 text-gray-600 dark:text-gray-300">
+                        <li class="flex gap-2">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">•</span>
+                            <span>Developed new APIs with clear, detailed documentation to improve usability and
+                                cross-team collaboration. Maintained and updated technical literature, ensuring accuracy
+                                and alignment with ongoing development changes.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white">
+    <section id="skills" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 fade-in">
-                <h2 class="text-3xl font-bold mb-4">
-                    <span class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">03</span>
+                <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                    <span
+                        class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">03</span>
                     Technical Skills
                 </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">A comprehensive set of technical skills acquired through years of professional experience.</p>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">A comprehensive set of technical skills
+                    acquired through years of professional experience.</p>
             </div>
 
             <div class="fade-in">
                 <!-- Tab Navigation -->
                 <div class="flex flex-wrap justify-center gap-2 mb-8">
-                    <button class="tab-button px-4 py-2 rounded-lg text-sm font-medium active" onclick="showTab('languages')">Languages</button>
-                    <button class="tab-button px-4 py-2 rounded-lg text-sm font-medium" onclick="showTab('cloud')">Cloud</button>
-                    <button class="tab-button px-4 py-2 rounded-lg text-sm font-medium" onclick="showTab('containers')">Containers</button>
-                    <button class="tab-button px-4 py-2 rounded-lg text-sm font-medium" onclick="showTab('architecture')">Architecture</button>
-                    <button class="tab-button px-4 py-2 rounded-lg text-sm font-medium" onclick="showTab('databases')">Databases</button>
-                    <button class="tab-button px-4 py-2 rounded-lg text-sm font-medium" onclick="showTab('tools')">Tools</button>
+                    <button
+                        class="tab-button px-4 py-2 rounded-lg text-sm font-medium active bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                        onclick="showTab('languages')">Languages</button>
+                    <button
+                        class="tab-button px-4 py-2 rounded-lg text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                        onclick="showTab('cloud')">Cloud & DevOps</button>
+                    <button
+                        class="tab-button px-4 py-2 rounded-lg text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                        onclick="showTab('containers')">Containers</button>
+                    <button
+                        class="tab-button px-4 py-2 rounded-lg text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                        onclick="showTab('architecture')">Architecture</button>
+                    <button
+                        class="tab-button px-4 py-2 rounded-lg text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                        onclick="showTab('databases')">Databases</button>
+                    <button
+                        class="tab-button px-4 py-2 rounded-lg text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                        onclick="showTab('tools')">Tools</button>
                 </div>
 
                 <!-- Tab Contents -->
-                <div class="bg-gray-50 rounded-lg p-6">
+                <div
+                    class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50">
                     <div id="languages" class="tab-content active">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Go</h3>
-                                <p class="text-sm text-gray-600">Primary language for backend development</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Go</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Primary language for backend
+                                    development</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Ruby on Rails</h3>
-                                <p class="text-sm text-gray-600">Web application framework</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">JavaScript</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Node.js/Express.js development</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">JavaScript</h3>
-                                <p class="text-sm text-gray-600">Frontend and Node.js development</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Ruby on Rails</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Web application framework</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">PHP</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Backend development</p>
                             </div>
                         </div>
                     </div>
 
                     <div id="cloud" class="tab-content">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">AWS</h3>
-                                <p class="text-sm text-gray-600">Cloud infrastructure and services</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">AWS</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">EC2, S3, Lambda</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Google Cloud Platform (GCP)</h3>
-                                <p class="text-sm text-gray-600">Cloud computing services</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">GCP</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Google Cloud Platform</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Docker</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Containerization</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Kubernetes</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Container orchestration</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Nomad</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Workload orchestration</p>
                             </div>
                         </div>
                     </div>
 
                     <div id="containers" class="tab-content">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Docker</h3>
-                                <p class="text-sm text-gray-600">Containerization</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Docker</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Containerization</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Kubernetes</h3>
-                                <p class="text-sm text-gray-600">Container orchestration</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Kubernetes</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Container orchestration</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Nomad</h3>
-                                <p class="text-sm text-gray-600">Workload orchestration</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Nomad</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Workload orchestration</p>
                             </div>
                         </div>
                     </div>
 
                     <div id="architecture" class="tab-content">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Microservices</h3>
-                                <p class="text-sm text-gray-600">Distributed system design</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Microservices</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Distributed system design</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">REST APIs</h3>
-                                <p class="text-sm text-gray-600">API design and implementation</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">REST APIs</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">API design and implementation</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">gRPC</h3>
-                                <p class="text-sm text-gray-600">High-performance RPC framework</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">gRPC</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">High-performance RPC framework</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">WebSocket</h3>
-                                <p class="text-sm text-gray-600">Real-time communication protocol</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">WebSocket</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Real-time communication protocol</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Kafka</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Event streaming platform</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">NSQ</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Real-time distributed messaging</p>
                             </div>
                         </div>
                     </div>
 
                     <div id="databases" class="tab-content">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">MySQL</h3>
-                                <p class="text-sm text-gray-600">Relational database</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">PostgreSQL</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Advanced relational database</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">PostgreSQL</h3>
-                                <p class="text-sm text-gray-600">Advanced relational database</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">MySQL</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Relational database</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Redis</h3>
-                                <p class="text-sm text-gray-600">In-memory data structure store</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">MariaDB</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Relational database</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">MongoDB</h3>
-                                <p class="text-sm text-gray-600">NoSQL document database</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Redis</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">In-memory data structure store</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">MongoDB</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">NoSQL document database</p>
                             </div>
                         </div>
                     </div>
 
                     <div id="tools" class="tab-content">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Git</h3>
-                                <p class="text-sm text-gray-600">Version control</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Git</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Version control</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Jira</h3>
-                                <p class="text-sm text-gray-600">Project management</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Jira</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Project management</p>
                             </div>
-                            <div class="skill-card p-4 bg-white rounded-lg border">
-                                <h3 class="font-medium text-lg mb-1">Slack</h3>
-                                <p class="text-sm text-gray-600">Team communication</p>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Slack</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Team communication</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Microsoft Teams
+                                </h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Collaboration tools</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Grafana</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Monitoring and visualization</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">Datadog</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Monitoring and logging</p>
+                            </div>
+                            <div
+                                class="skill-card p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300">
+                                <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">ELK Stack</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Logging and analytics</p>
                             </div>
                         </div>
                     </div>
@@ -389,62 +655,87 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 fade-in">
-                <h2 class="text-3xl font-bold mb-4">
-                    <span class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">04</span>
+                <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                    <span
+                        class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">04</span>
                     Featured Projects
                 </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Showcasing some of the significant projects I've worked on throughout my career.</p>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Showcasing some of the significant
+                    projects I've worked on throughout my career.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Project 1 -->
-                <div class="project-card bg-white rounded-lg shadow-sm overflow-hidden fade-in">
-                    <div class="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                <div
+                    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 overflow-hidden fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50">
+                    <div
+                        class="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                         <img src="./assets/images/project_adt.png" class="object-contain max-w-full max-h-full">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">AccelByte Development Toolkit</h3>
-                        <p class="text-gray-600 mb-4">A comprehensive toolkit enabling game developers to distribute builds and process crash reports efficiently.</p>
-                        <p class="text-sm mb-4"><span class="font-medium">Achievement:</span> Distributed 12.5 petabytes of game builds and processed 118,000 crash reports in 2024.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">AccelByte Development
+                            Toolkit</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A comprehensive toolkit enabling game
+                            developers to distribute builds and process crash reports efficiently.</p>
+                        <p class="text-sm mb-4 text-gray-600 dark:text-gray-400"><span
+                                class="font-medium dark:text-gray-200">Achievement:</span> Distributed 12.5 petabytes of
+                            game builds and processed 118,000 crash reports in 2024.</p>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card bg-white rounded-lg shadow-sm overflow-hidden fade-in">
-                    <div class="aspect-video bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
+                <div
+                    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 overflow-hidden fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50">
+                    <div
+                        class="aspect-video bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
                         <img src="./assets/images/project_armada.png" class="object-contain max-w-full max-h-full">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">AccelByte Armada</h3>
-                        <p class="text-gray-600 mb-4">Scalable server system for large-scale multiplayer gaming environments using AWS and bare-metal infrastructure.</p>
-                        <p class="text-sm mb-4"><span class="font-medium">Achievement:</span> Ensured reliable performance for multiplayer environments across multiple game titles.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">AccelByte Armada</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Scalable server system for large-scale
+                            multiplayer gaming environments using AWS and bare-metal infrastructure.</p>
+                        <p class="text-sm mb-4 text-gray-600 dark:text-gray-400"><span
+                                class="font-medium dark:text-gray-200">Achievement:</span> Ensured reliable performance
+                            for multiplayer environments across multiple game titles.</p>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card bg-white rounded-lg shadow-sm overflow-hidden fade-in">
-                    <div class="aspect-video bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+                <div
+                    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 overflow-hidden fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50">
+                    <div
+                        class="aspect-video bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
                         <img src="./assets/images/project_happyfresh.png" class="object-contain max-w-full max-h-full">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">HappyFresh Payment System</h3>
-                        <p class="text-gray-600 mb-4">A robust system supporting multiple payment gateways, dynamic pricing, refunds, and withdrawals.</p>
-                        <p class="text-sm mb-4"><span class="font-medium">Achievement:</span> Boosted transaction volume and processing speed for 1.5 million active users across Southeast Asia.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">HappyFresh Payment
+                            System</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A robust system supporting multiple payment
+                            gateways, dynamic pricing, refunds, and withdrawals.</p>
+                        <p class="text-sm mb-4 text-gray-600 dark:text-gray-400"><span
+                                class="font-medium dark:text-gray-200">Achievement:</span> Boosted transaction volume
+                            and processing speed for 1.5 million active users across Southeast Asia.</p>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-card bg-white rounded-lg shadow-sm overflow-hidden fade-in">
-                    <div class="aspect-video bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center">
+                <div
+                    class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 overflow-hidden fade-in hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50">
+                    <div
+                        class="aspect-video bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center">
                         <img src="./assets/images/project_molatv.png" class="object-contain max-w-full max-h-full">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Mola TV Sofa Kuning Interactive Quiz</h3>
-                        <p class="text-gray-600 mb-4">Real-time, low-latency, high-reliability communication system for nationwide live TV broadcasts.</p>
-                        <p class="text-sm mb-4"><span class="font-medium">Achievement:</span> Scaled to support up to 500,000 concurrent viewers, enabling seamless audience participation.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">Mola TV Sofa Kuning
+                            Interactive Quiz</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Real-time, low-latency, high-reliability
+                            communication system for nationwide live TV broadcasts.</p>
+                        <p class="text-sm mb-4 text-gray-600 dark:text-gray-400"><span
+                                class="font-medium dark:text-gray-200">Achievement:</span> Scaled to support up to
+                            500,000 concurrent viewers, enabling seamless audience participation.</p>
                     </div>
                 </div>
             </div>
@@ -452,45 +743,53 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-20 bg-white">
+    <section id="education" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 fade-in">
-                <h2 class="text-3xl font-bold mb-4">
-                    <span class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">05</span>
+                <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                    <span
+                        class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">05</span>
                     Education & Certifications
                 </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Academic background and professional certifications.</p>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Academic background and professional
+                    certifications.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="fade-in">
-                    <h3 class="text-xl font-bold mb-6">Education</h3>
+                    <h3 class="text-xl font-bold mb-6 text-gray-900 dark:text-gray-100">Education</h3>
                     <div class="space-y-6">
-                        <div class="bg-gray-50 rounded-lg p-6">
+                        <div
+                            class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                             <div class="flex items-start gap-4">
                                 <div class="mt-1">
-                                    <img src="./assets/images/binus_logo.jpeg" class="w-10 h-10 object-contain rounded" />
+                                    <img src="./assets/images/binus_logo.jpeg"
+                                        class="w-10 h-10 object-contain rounded" />
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold">Master of Information Systems Management</h4>
-                                    <p class="text-gray-600">BINUS University</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-gray-100">Master of Information
+                                        Systems Management</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">BINUS University</p>
                                     <div class="flex justify-between items-center mt-2">
-                                        <span class="text-gray-500">Sep 2022 - Sep 2024</span>
+                                        <span class="text-gray-500 dark:text-gray-400">Sep 2022 - Sep 2024</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-gray-50 rounded-lg p-6">
+                        <div
+                            class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                             <div class="flex items-start gap-4">
                                 <div class="mt-1">
-                                    <img src="./assets/images/unpad_logo.jpeg" class="w-10 h-10 object-contain rounded" />
+                                    <img src="./assets/images/unpad_logo.jpeg"
+                                        class="w-10 h-10 object-contain rounded" />
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold">Bachelor of Computer Science</h4>
-                                    <p class="text-gray-600">Padjadjaran University</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-gray-100">Bachelor of Computer
+                                        Science</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Padjadjaran University</p>
                                     <div class="flex justify-between items-center mt-2">
-                                        <span class="text-gray-500">Aug 2014 - Aug 2018</span>
+                                        <span class="text-gray-500 dark:text-gray-400">Aug 2014 - Aug 2018</span>
                                     </div>
                                 </div>
                             </div>
@@ -500,15 +799,38 @@
 
                 <div class="space-y-8">
                     <div class="fade-in">
-                        <h3 class="text-xl font-bold mb-6">Certifications</h3>
-                        <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-6 text-gray-900 dark:text-gray-100">Certifications</h3>
+                        <div
+                            class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                             <div class="flex items-start gap-4">
                                 <div class="mt-1">
-                                    <img src="./assets/images/amazon_web_services_logo.jpeg" class="w-10 h-10 object-contain rounded" />
+                                    <img src="./assets/images/amazon_web_services_logo.jpeg"
+                                        class="w-10 h-10 object-contain rounded" />
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold">AWS Certified Cloud Practitioner</h4>
-                                    <p class="text-gray-600">Validity: Sep 2023 - Sep 2026</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-gray-100">AWS Certified Cloud
+                                        Practitioner</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="text-xl font-bold mb-6 text-gray-900 dark:text-gray-100">Languages</h3>
+                        <div
+                            class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+                            <div class="space-y-3">
+                                <div>
+                                    <span class="font-medium">Indonesian:</span> <span
+                                        class="text-gray-600 dark:text-gray-400">Native</span>
+                                </div>
+                                <div>
+                                    <span class="font-medium">English:</span> <span
+                                        class="text-gray-600 dark:text-gray-400">Professional Business</span>
+                                </div>
+                                <div>
+                                    <span class="font-medium">Japanese:</span> <span
+                                        class="text-gray-600 dark:text-gray-400">Beginner</span>
                                 </div>
                             </div>
                         </div>
@@ -519,52 +841,64 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 fade-in">
-                <h2 class="text-3xl font-bold mb-4">
-                    <span class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">06</span>
+                <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                    <span
+                        class="section-number text-white w-8 h-8 inline-flex items-center justify-center rounded-full mr-3 text-sm">06</span>
                     Get In Touch
                 </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Have a project in mind or want to discuss potential opportunities? Feel free to reach out.</p>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Have a project in mind or want to discuss
+                    potential opportunities? Feel free to reach out.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Contact Info -->
                 <div class="md:col-span-1 fade-in">
                     <div class="space-y-6">
-                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div
+                            class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg dark:shadow-gray-900/50 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
                             <div class="flex items-start gap-4">
                                 <div class="mt-1">
-                                    <img src="./assets/icons/email.svg" class="w-5 h-5 object-contain" />
+                                    <img src="./assets/icons/email.svg"
+                                        class="w-5 h-5 object-contain dark:invert dark:opacity-80" />
                                 </div>
                                 <div>
-                                    <h3 class="font-medium">Email</h3>
-                                    <a href="mailto:ghifariyusf@gmail.com" class="text-gray-600 hover:text-blue-600 transition-colors">ghifariyusf@gmail.com</a>
+                                    <h3 class="font-medium text-gray-900 dark:text-gray-100">Email</h3>
+                                    <a href="mailto:moghifari@gmail.com"
+                                        class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">moghifari@gmail.com</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div
+                            class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg dark:shadow-gray-900/50 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
                             <div class="flex items-start gap-4">
                                 <div class="mt-1">
-                                    <img src="./assets/icons/linkedin.svg" class="w-5 h-5 object-contain" />
+                                    <img src="./assets/icons/linkedin.svg"
+                                        class="w-5 h-5 object-contain dark:invert dark:opacity-80" />
                                 </div>
                                 <div>
-                                    <h3 class="font-medium">LinkedIn</h3>
-                                    <a href="https://linkedin.com/in/mghifariyusuf" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors">linkedin.com/in/mghifariyusuf</a>
+                                    <h3 class="font-medium text-gray-900 dark:text-gray-100">LinkedIn</h3>
+                                    <a href="https://linkedin.com/in/mghifariyusuf" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">linkedin.com/in/mghifariyusuf</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div
+                            class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg dark:shadow-gray-900/50 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
                             <div class="flex items-start gap-4">
                                 <div class="mt-1">
-                                    <img src="./assets/icons/github.svg" class="w-5 h-5 object-contain" />
+                                    <img src="./assets/icons/github.svg"
+                                        class="w-5 h-5 object-contain dark:invert dark:opacity-80" />
                                 </div>
                                 <div>
-                                    <h3 class="font-medium">GitHub</h3>
-                                    <a href="https://github.com/mghifariyusuf" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors">github.com/mghifariyusuf</a>
+                                    <h3 class="font-medium text-gray-900 dark:text-gray-100">GitHub</h3>
+                                    <a href="https://github.com/mghifariyusuf" target="_blank" rel="noopener noreferrer"
+                                        class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">github.com/mghifariyusuf</a>
                                 </div>
                             </div>
                         </div>
@@ -573,30 +907,45 @@
 
                 <!-- Contact Form -->
                 <div class="md:col-span-2 fade-in">
-                    <div class="bg-white rounded-lg shadow-sm p-6">
-                        <h3 class="text-xl font-semibold mb-2">Send a Message</h3>
-                        <p class="text-gray-600 mb-6">Fill out the form below and it will open your email client with the message pre-filled.</p>
-                        
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">Send a Message</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">Fill out the form below and it will open your
+                            email client with the message pre-filled.</p>
+
                         <form id="contactForm" class="space-y-4">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                                    <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your name">
+                                    <label for="name"
+                                        class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Name</label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
+                                        placeholder="Your name">
                                 </div>
                                 <div>
-                                    <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                                    <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your email">
+                                    <label for="email"
+                                        class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Email</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
+                                        placeholder="Your email">
                                 </div>
                             </div>
                             <div>
-                                <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
-                                <input type="text" id="subject" name="subject" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Subject of your message">
+                                <label for="subject"
+                                    class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Subject</label>
+                                <input type="text" id="subject" name="subject" required
+                                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
+                                    placeholder="Subject of your message">
                             </div>
                             <div>
-                                <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                                <textarea id="message" name="message" rows="5" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your message"></textarea>
+                                <label for="message"
+                                    class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
+                                    placeholder="Your message"></textarea>
                             </div>
-                            <button type="submit" class="w-full px-6 py-3 gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                            <button type="submit"
+                                class="w-full px-6 py-3 gradient-bg text-white rounded-xl hover:opacity-90 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1 font-medium">
                                 Send via Email
                             </button>
                         </form>
@@ -607,7 +956,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
+    <footer class="bg-gray-900 dark:bg-black text-white py-8 transition-colors duration-300">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 Mohammad Ghifari Yusuf</p>
         </div>
@@ -615,4 +964,5 @@
 
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
